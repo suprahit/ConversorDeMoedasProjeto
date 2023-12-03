@@ -1,10 +1,14 @@
 import requests
 
 
-def currency_list(url):
+def list_data_fetch(url):
     data = requests.get('{}/currencies'.format(url))
-    data_dict = data.json()
+    data_json = data.json()
+    return data_json
 
+
+def currency_list_menu(url):
+    data_dict = list_data_fetch(url)
     for key, value in data_dict.items():
         print("{} - {}".format(key, value))
     while True:
