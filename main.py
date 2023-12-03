@@ -46,11 +46,10 @@ def currency_list():
             if escolha == 1:
                 return
             else:
-                raise TypeError
-        except TypeError:
+                raise ValueError
+        except ValueError:
             print("Choose a valid option!")
             print("")
-
 
 
 def end_app():
@@ -73,8 +72,8 @@ def menu():
             elif escolha == 3:
                 end_app()
             else:
-                raise TypeError
-        except TypeError:
+                raise ValueError
+        except ValueError:
             print("Choose a valid option!")
             print("")
 
