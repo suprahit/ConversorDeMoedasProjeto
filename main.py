@@ -1,16 +1,12 @@
 from sys import exit
-from list import currency_list
+from list import currency_list_menu
+from conversor import currency_conversor_menu
 
 url = "https://api.frankfurter.app"
 
 print("")
 print("Welcome to the currency converter")
 print("Note: Values may change overtime")
-
-
-def end_app():
-    print("Bye bye :)")
-    exit(0)
 
 
 def menu():
@@ -22,11 +18,12 @@ def menu():
         try:
             option = int(input(">>> "))
             if option == 1:
-                currency_list(url)
+                currency_list_menu(url)
             elif option == 2:
-                pass
+                currency_conversor_menu(url)
             elif option == 3:
-                end_app()
+                print("Ending app...")
+                exit(0)
             else:
                 raise ValueError
         except ValueError:
