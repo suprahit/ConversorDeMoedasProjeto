@@ -20,7 +20,7 @@ def currency_conversor_menu(url):
                 data_dict = conversor_data_fetch(url, from_currency, to_currency, amount)
                 print("{0} {1} is {2} {3}"
                       .format(amount, from_currency, data_dict["rates"][to_currency], to_currency))
-                print("Date: {}".format(data_dict["date"]))
+                print("Last Updated: {}".format(data_dict["date"]))
                 while True:
                     print("1 - Another conversion")
                     print("2 - Back")
